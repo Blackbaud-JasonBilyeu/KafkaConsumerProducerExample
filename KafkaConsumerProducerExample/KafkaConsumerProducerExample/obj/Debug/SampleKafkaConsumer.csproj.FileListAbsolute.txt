@@ -1,0 +1,11 @@
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\bin\Debug\SampleKafkaConsumer.exe.config
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\bin\Debug\x86\librdkafka.dll
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\bin\Debug\x86\zlib.dll
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\bin\Debug\x64\librdkafka.dll
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\bin\Debug\x64\zlib.dll
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\bin\Debug\SampleKafkaConsumer.exe
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\bin\Debug\SampleKafkaConsumer.pdb
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\bin\Debug\RdKafka.dll
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\obj\Debug\SampleKafkaConsumer.csprojResolveAssemblyReference.cache
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\obj\Debug\SampleKafkaConsumer.exe
+c:\users\jasonbilyeu\git\SampleKafkaConsumer\SampleKafkaConsumer\SampleKafkaConsumer\obj\Debug\SampleKafkaConsumer.pdb
