@@ -24,13 +24,12 @@ namespace SampleKafkaConsumer
 
         static async Task RunUntilUserKeypress(string kafkaUrl, string kafkaTopic, string kafkaPublishMessage)
         {
-            Config config = new Config() { GroupId = "example-csharp-consumer" };
+            Config config = new Config();
             config["security.protocol"] = "ssl";
             config["ssl.ca.location"] = "C:\\Users\\JasonBilyeu\\Documents\\ca-cert";
-            //config["security.protocol"] = "SASL_PLAINTEXT";
-            //config["sasl.mechanisms"] = "PLAIN";
-            //config["sasl.username"] = "kafka1";
-            //config["sasl.password"] = "k@fk@123";
+            config["ssl.certificate.location"] = "C:\\Users\\JasonBilyeu\\Documents\\client_10.3.19.213_client.pem";
+            config["ssl.key.location"] = "C:\\Users\\JasonBilyeu\\Documents\\client_10.3.19.213_client.key";
+            config["ssl.key.password"] = "abcdefgh";
             using (Producer producer = new Producer(config, kafkaUrl))
             using (Topic topic = producer.Topic(kafkaTopic))
             {
@@ -38,6 +37,7 @@ namespace SampleKafkaConsumer
 
                 var i = 0;
                 while (!Console.KeyAvailable)
+                //while (i < 1)
                 {
                     byte[] data = Encoding.UTF8.GetBytes($"{kafkaPublishMessage} {i}");
                     DeliveryReport deliveryReport = await topic.Produce(data);

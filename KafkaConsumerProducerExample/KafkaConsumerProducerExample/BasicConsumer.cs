@@ -13,10 +13,9 @@ namespace SampleKafkaConsumer
             Config config = new Config() { GroupId = "example-csharp-consumer" };
             config["security.protocol"] = "ssl";
             config["ssl.ca.location"] = "C:\\Users\\JasonBilyeu\\Documents\\ca-cert";
-            //config["security.protocol"] = "SASL_PLAINTEXT";
-            //config["sasl.mechanisms"] = "PLAIN";
-            //config["sasl.username"] = "kafka1";
-            //config["sasl.password"] = "k@fk@123";
+            config["ssl.certificate.location"] = "C:\\Users\\JasonBilyeu\\Documents\\client_10.3.19.213_client.pem";
+            config["ssl.key.location"] = "C:\\Users\\JasonBilyeu\\Documents\\client_10.3.19.213_client.key";
+            config["ssl.key.password"] = "abcdefgh";
             consumer = new EventConsumer(config, kafkaUrl);
             consumer.OnMessage += (obj, msg) =>
             {

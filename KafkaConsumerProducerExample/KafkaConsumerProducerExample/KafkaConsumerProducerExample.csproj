@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NonStaticBasicConsumer.cs" />
     <Compile Include="BasicConsumer.cs" />
     <Compile Include="BasicProducer.cs" />
     <Compile Include="Program.cs" />
