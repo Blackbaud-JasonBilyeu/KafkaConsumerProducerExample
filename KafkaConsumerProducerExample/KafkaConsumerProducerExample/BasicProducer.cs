@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Threading;
 using RdKafka;
 using System.Collections.Generic;
+using System.Configuration;
 
 namespace SampleKafkaConsumer
 {
@@ -26,10 +27,10 @@ namespace SampleKafkaConsumer
         {
             Config config = new Config();
             config["security.protocol"] = "ssl";
-            config["ssl.ca.location"] = "C:\\Users\\JasonBilyeu\\Documents\\ca-cert";
-            config["ssl.certificate.location"] = "C:\\Users\\JasonBilyeu\\Documents\\client_10.3.19.213_client.pem";
-            config["ssl.key.location"] = "C:\\Users\\JasonBilyeu\\Documents\\client_10.3.19.213_client.key";
-            config["ssl.key.password"] = "abcdefgh";
+            config["ssl.ca.location"] = ConfigurationManager.AppSettings["ssl.ca.location"];
+            config["ssl.certificate.location"] = ConfigurationManager.AppSettings["ssl.certificate.location"];
+            config["ssl.key.location"] = ConfigurationManager.AppSettings["ssl.key.location"];
+            config["ssl.key.password"] = ConfigurationManager.AppSettings["ssl.key.password"];
             using (Producer producer = new Producer(config, kafkaUrl))
             using (Topic topic = producer.Topic(kafkaTopic))
             {
